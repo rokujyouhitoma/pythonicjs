@@ -14,7 +14,6 @@ var min_max_ = function(args, implementation_of) {
     var length = args.length;
     var first = args[0];
     var last = args[length - 1];
-
     if (implementation_of === 'min') {
         if (typeof last === 'object' && last.hasOwnProperty('key')) {
             throw new NotImplementedError();
@@ -23,8 +22,7 @@ var min_max_ = function(args, implementation_of) {
             return Math.min.apply(null, first);
         }
         return Math.min.apply(null, args);
-    }
-    else if (implementation_of === 'max') {
+    } else if (implementation_of === 'max') {
         if (typeof last === 'object' && last.hasOwnProperty('key')) {
             throw new NotImplementedError();
         }
@@ -32,8 +30,7 @@ var min_max_ = function(args, implementation_of) {
             return Math.max.apply(null, first);
         }
         return Math.max.apply(null, args);
-    }
-    else {
+    } else {
         throw new Error();
     }
 };

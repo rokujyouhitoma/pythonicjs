@@ -7,11 +7,9 @@ var contains = function(value, fragment) {
     var result = value.search(fragment);
     if (result === -1) {
         return false;
-    }
-    else if (result > -1) {
+    } else if (result > -1) {
         return true;
-    }
-    else {
+    } else {
         throw new Error('string.contains: ' + result);
     }
 };
@@ -99,8 +97,7 @@ var startwith = function(str, substr) {
     var parttern = new RegExp('^' + substr);
     if (str.search(parttern) === 0) {
         return true;
-    }
-    else {
+    } else {
         return false;
     }
 };
