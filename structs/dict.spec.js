@@ -1,16 +1,16 @@
 describe('dict spec', function() {
   var dict;
   beforeEach(function(){
-    dict = require('./pythonic').dict;
+    dict = require('./dict').dict;
   });
   afterEach(function(){
     dict = undefined;
   });
   //https://bitbucket.org/pypy/pypy/src/169eb17f9894/lib-python/2.7/test/test_dict.py#cl-31
   it('test_keys', function(){
-    var d = new dict({});
+    var d = dict({});
     expect(d.keys()).toEqual([]);
-    d = new dict({'a': 1, 'b': 2});
+    d = dict({'a': 1, 'b': 2});
     var k = d.keys();
     expect(d.has_key('a')).toBeTruthy();
     expect(d.has_key('b')).toBeTruthy();
@@ -18,9 +18,9 @@ describe('dict spec', function() {
   });
   //https://bitbucket.org/pypy/pypy/src/169eb17f9894/lib-python/2.7/test/test_dict.py#cl-58
   it('test_has_key', function(){
-    var d = new dict({});
+    var d = dict({});
     //self.assertFalse(d.has_key('a'))
-    d = new dict({'a': 1, 'b': 2});
+    d = dict({'a': 1, 'b': 2});
     var k = d.keys();
     k.sort();
     expect(k).toEqual(['a', 'b']);
@@ -28,21 +28,21 @@ describe('dict spec', function() {
   });
   //https://bitbucket.org/pypy/pypy/src/169eb17f9894/lib-python/2.7/test/test_dict.py#cl-263
   it('test_get', function(){
-    var d = new dict({});
+    var d = dict({});
     expect(d.get('c')).toEqual(null);
     expect(d.get('c', 3)).toEqual(3);
-    d = new dict({'a': 1, 'b': 2});
+    d = dict({'a': 1, 'b': 2});
     expect(d.get('c')).toEqual(null);
     expect(d.get('c', 3)).toEqual(3);
     expect(d.get('a')).toEqual(1);
     expect(d.get('a', 3)).toEqual(1);
-    //var TypeError = require('./pythonic').TypeError;
+    //var TypeError = require('./exceptions').TypeError;
     //self.assertRaises(TypeError, d.get);
     //self.assertRaises(TypeError, d.get, None, None, None);
   });
   //https://bitbucket.org/pypy/pypy/src/169eb17f9894/lib-python/2.7/test/test_dict.py#cl-275
   it('test_setdefault', function(){
-    var d = new dict({});
+    var d = dict({});
     expect(d.setdefault('key0')).toBeNull();
     d.setdefault('key0', []);
     expect(d.setdefault('key0')).toBeNull();

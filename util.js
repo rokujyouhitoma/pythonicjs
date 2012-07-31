@@ -9,4 +9,5 @@ function inherits(childCtor, parentCtor) {
   childCtor.prototype = new tempCtor();
 }
 
+/** @type {function} */
 exports.inherits = inherits;

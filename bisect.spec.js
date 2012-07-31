@@ -2,10 +2,10 @@ describe('bispect spec', function() {
 
   describe('test bisect left', function() {
     var bisect_left;
-    beforeEach(function(){
+    beforeEach(function() {
       bisect_left = require('./bisect').bisect_left;
     });
-    afterEach(function(){
+    afterEach(function() {
       bisect_left = undefined;
     });
     it('', function() {
@@ -47,16 +47,16 @@ describe('bispect spec', function() {
 
   describe('test bisect right', function() {
     var bisect_right;
-    beforeEach(function(){
+    beforeEach(function() {
       bisect_right = require('./bisect').bisect_right;
     });
-    afterEach(function(){
+    afterEach(function() {
       bisect_right = undefined;
     });
     it('', function() {
       var a = [0, 5, 6, 6, 6, 7];
       //expect(bisect_right(a, null)).toEqual(0);
-      expect(bisect_right(a,  0)).toEqual(1);
+      expect(bisect_right(a, 0)).toEqual(1);
       expect(bisect_right(a, -3)).toEqual(0);
       expect(bisect_right(a, 0)).toEqual(1);
       expect(bisect_right(a, 3)).toEqual(1);
@@ -93,10 +93,10 @@ describe('bispect spec', function() {
 
   describe('test insort right', function() {
     var insort_right;
-    beforeEach(function(){
+    beforeEach(function() {
       insort_right = require('./bisect').insort_right;
     });
-    afterEach(function(){
+    afterEach(function() {
       insort_right = undefined;
     });
     it('', function() {
@@ -108,10 +108,10 @@ describe('bispect spec', function() {
 
   describe('test insort left', function() {
     var insort_left;
-    beforeEach(function(){
+    beforeEach(function() {
       insort_left = require('./bisect').insort_left;
     });
-    afterEach(function(){
+    afterEach(function() {
       insort_left = undefined;
     });
     it('', function() {

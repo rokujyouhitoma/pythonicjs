@@ -1,0 +1,10 @@
+PythonicJS
+==========
+
+PythonicJS aspire to becoming Python philosophy.
+
+0.0.1
+------
+
+* Support for basic data structures(dict, set).
+* Support for StringIO, bisect package from The Python Standard Library.
