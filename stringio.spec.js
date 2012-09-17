@@ -1,8 +1,8 @@
 /*
- * @see pypy-1.7/lib-python/2.7/test/test_StringIO.py
+ * @see https://bitbucket.org/pypy/benchmarks/src/f3830896d637/lib/pypy/lib-python/2.7/test/test_StringIO.py
  */
 var StopIteration = require('./exceptions').StopIteration;
-var StringIO = require('./stringio').StringIO;
+var StringIO = require('./StringIO').StringIO;
 
 describe('TestGenericStringIO', function() {
   var _line = '';

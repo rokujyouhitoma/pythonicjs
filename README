@@ -7,4 +7,4 @@ PythonicJS aspire to becoming Python philosophy.
 ------
 
 * Support for basic data structures(dict, set).
-* Support for StringIO, bisect package from The Python Standard Library.
+* Support for StringIO, bisect package from 'The Python Standard Library'.
